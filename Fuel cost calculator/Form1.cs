@@ -16,5 +16,20 @@ namespace Fuel_cost_calculator
         {
             InitializeComponent();
         }
+
+        private void btncalculate_Click(object sender, EventArgs e)
+        {
+            int a = int.Parse(txtkilometer.Text);
+            int b = int.Parse(txtliter.Text);
+            int sumall = a / b;
+            txtresult.Text = sumall.ToString();
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            this.txtkilometer.Text = "";
+            this.txtliter.Text = "";
+            this.txtresult.Text = "";
+        }
     }
 }
